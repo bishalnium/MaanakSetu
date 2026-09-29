@@ -24,7 +24,10 @@ export const MidnightCyberBackground: React.FC<MidnightCyberBackgroundProps> = (
   }, []);
 
   return (
-    <div className={`relative w-full min-h-screen overflow-hidden bg-[#060913] text-slate-100 ${className}`}>
+    <div
+      className={`relative w-full min-h-screen overflow-hidden bg-[#060913] text-slate-100 ${className}`}
+      style={{ contain: 'paint', isolation: 'isolate', transform: 'translateZ(0)' }}
+    >
       {/* 1. Cybernetic Grid Plane with Horizon Fade */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.14]"
@@ -36,11 +39,12 @@ export const MidnightCyberBackground: React.FC<MidnightCyberBackgroundProps> = (
           backgroundSize: '48px 48px',
           maskImage: 'radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 85%)',
           WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 85%)',
+          contain: 'paint',
         }}
       />
 
       {/* 2. Floating Zero-Knowledge Cryptographic Particles */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" style={{ contain: 'paint', transform: 'translateZ(0)' }}>
         {particles.map((p) => (
           <div
             key={p.id}
@@ -51,7 +55,7 @@ export const MidnightCyberBackground: React.FC<MidnightCyberBackgroundProps> = (
               width: `${p.size}px`,
               height: `${p.size}px`,
               backgroundColor: p.color,
-              boxShadow: `0 0 8px ${p.color}`,
+              boxShadow: `0 0 6px ${p.color}`,
               animationDelay: `${p.delay}s`,
               animationDuration: `${p.duration}s`,
             }}
@@ -60,33 +64,43 @@ export const MidnightCyberBackground: React.FC<MidnightCyberBackgroundProps> = (
       </div>
 
       {/* 3. Official Midnight Network Clock Portal Watermark (Subtle Background Presence) */}
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.06] select-none">
+      <div
+        className="pointer-events-none absolute top-1/2 left-1/2 select-none"
+        style={{
+          transform: 'translate(-50%, -50%) translateZ(0)',
+          opacity: 0.05,
+          contain: 'paint',
+        }}
+      >
         <MidnightLogo size={720} glow={false} />
       </div>
 
       {/* 4. Multi-Layer Dynamic Breathing Nebula Auroras */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        style={{ contain: 'paint', transform: 'translateZ(0)' }}
+      >
         {/* Midnight Blue Core Orb */}
         <div
-          className="absolute -top-[15%] left-[20%] h-[600px] w-[600px] rounded-full opacity-35 blur-[160px] filter animate-orb-breathe"
+          className="absolute -top-[15%] left-[20%] h-[600px] w-[600px] rounded-full opacity-35 blur-[140px] filter animate-orb-breathe"
           style={{ background: 'radial-gradient(circle, #0000fe 0%, #0369a1 60%, transparent 100%)' }}
         />
 
         {/* Neon Cyan Glow */}
         <div
-          className="absolute top-[20%] -left-[10%] h-[500px] w-[500px] rounded-full opacity-25 blur-[140px] filter animate-pulse-slow"
+          className="absolute top-[20%] -left-[10%] h-[500px] w-[500px] rounded-full opacity-25 blur-[120px] filter animate-pulse-slow"
           style={{ background: 'radial-gradient(circle, #00f0ff 0%, #0284c7 70%, transparent 100%)' }}
         />
 
         {/* Deep Violet Indigo Accent */}
         <div
-          className="absolute top-[30%] -right-[10%] h-[550px] w-[550px] rounded-full opacity-25 blur-[150px] filter animate-orb-breathe"
+          className="absolute top-[30%] -right-[10%] h-[550px] w-[550px] rounded-full opacity-25 blur-[130px] filter animate-orb-breathe"
           style={{ background: 'radial-gradient(circle, #6366f1 0%, #4338ca 70%, transparent 100%)' }}
         />
 
         {/* Verification Emerald Ambient Underglow */}
         <div
-          className="absolute -bottom-[10%] left-[30%] h-[400px] w-[500px] rounded-full opacity-15 blur-[130px] filter"
+          className="absolute -bottom-[10%] left-[30%] h-[400px] w-[500px] rounded-full opacity-15 blur-[110px] filter"
           style={{ background: 'radial-gradient(circle, #10b981 0%, #065f46 70%, transparent 100%)' }}
         />
       </div>

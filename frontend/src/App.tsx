@@ -40,13 +40,13 @@ export function App() {
 
   const currentIndex = PAGES.findIndex((p) => p.id === activePage);
 
-  // Horizontal Navigation Function
+  // Horizontal Navigation Function - 60fps Instant Scroll Reset
   const navigateToPage = (newPageId: string) => {
     const nextIdx = PAGES.findIndex((p) => p.id === newPageId);
     if (nextIdx !== -1 && nextIdx !== currentIndex) {
       setDirection(nextIdx > currentIndex ? 1 : -1);
       setActivePage(newPageId);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo(0, 0);
     }
   };
 
@@ -114,28 +114,23 @@ export function App() {
 
   const slideVariants = {
     enter: (dir: number) => ({
-      x: dir > 0 ? 300 : -300,
+      x: dir > 0 ? '50%' : '-50%',
       opacity: 0,
-      scale: 0.98,
     }),
     center: {
       x: 0,
       opacity: 1,
-      scale: 1,
       transition: {
-        x: { type: 'spring', stiffness: 350, damping: 32 },
-        opacity: { duration: 0.22 },
-        scale: { duration: 0.22 },
+        x: { type: 'tween', ease: [0.16, 1, 0.3, 1], duration: 0.36 },
+        opacity: { duration: 0.24, ease: 'easeOut' },
       },
     },
     exit: (dir: number) => ({
-      x: dir < 0 ? 300 : -300,
+      x: dir < 0 ? '50%' : '-50%',
       opacity: 0,
-      scale: 0.98,
       transition: {
-        x: { type: 'spring', stiffness: 350, damping: 32 },
-        opacity: { duration: 0.18 },
-        scale: { duration: 0.18 },
+        x: { type: 'tween', ease: [0.16, 1, 0.3, 1], duration: 0.30 },
+        opacity: { duration: 0.18, ease: 'easeIn' },
       },
     }),
   };
@@ -186,9 +181,9 @@ export function App() {
           </motion.button>
         )}
 
-        {/* Main Content Stage with Horizontal Slide Transitions */}
+        {/* Main Content Stage with Ultra-Smooth 60fps GPU Horizontal Slide Transitions */}
         <main className="flex-1 flex flex-col justify-start relative overflow-x-hidden min-h-[calc(100vh-5rem)]">
-          <AnimatePresence mode="wait" custom={direction}>
+          <AnimatePresence mode="popLayout" custom={direction} initial={false}>
             <motion.div
               key={activePage}
               custom={direction}
@@ -196,6 +191,12 @@ export function App() {
               initial="enter"
               animate="center"
               exit="exit"
+              style={{
+                willChange: 'transform, opacity',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+              }}
               className="w-full flex-1 flex flex-col justify-between"
             >
               {/* Page View Body */}
