@@ -89,6 +89,17 @@ export const Footer: React.FC<FooterProps> = ({ network, contractAddress }) => {
                   Buyer Policy Builder
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe5eljZ-GYVFtmuc-UIDPQwZrsek4JO9dsn1n3bZeVhGpwidw/viewform?usp=dialog"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-cyan-neon transition-colors inline-flex items-center gap-1 text-indigo-300"
+                >
+                  <span>Evaluator Feedback Form</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
             </ul>
           </div>
 
