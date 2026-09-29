@@ -24,10 +24,7 @@ export const MidnightCyberBackground: React.FC<MidnightCyberBackgroundProps> = (
   }, []);
 
   return (
-    <div
-      className={`relative w-full min-h-screen overflow-hidden bg-[#060913] text-slate-100 ${className}`}
-      style={{ contain: 'paint', isolation: 'isolate', transform: 'translateZ(0)' }}
-    >
+    <div className={`relative w-full min-h-screen bg-[#060913] text-slate-100 ${className}`}>
       {/* 1. Cybernetic Grid Plane with Horizon Fade */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.14]"
