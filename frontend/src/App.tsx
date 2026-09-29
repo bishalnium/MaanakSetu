@@ -222,8 +222,8 @@ export function App() {
           </AnimatePresence>
         </main>
 
-        {/* Floating Bottom Dock Navigation */}
-        <Dock items={dockItems} />
+        {/* Floating Bottom Dock Navigation — Exclusively for Mobile Devices */}
+        <Dock items={dockItems} className="md:hidden" />
 
         {/* Web3 Wallet Modal */}
         <WalletModal

@@ -17,7 +17,7 @@ interface DockProps {
 
 export const Dock: React.FC<DockProps> = ({ items, className = '' }) => {
   return (
-    <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 ${className}`}>
+    <div className={`md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 ${className}`}>
       <motion.nav
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
