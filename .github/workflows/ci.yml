@@ -26,35 +26,36 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Install Compact Compiler Toolchain
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          compact update 0.31.1 || compact update || true
-          compact --version || true
+          compact update 0.31.1
+          compact --version
+          compact compile --version
 
       - name: Install Contract Workspace Dependencies
-        run: |
-          cd contract
-          npm ci || npm install
+        working-directory: contract
+        run: npm ci || npm install
 
-      - name: Compile MaanakSetu Compact Contract & Verify Circuits
+      - name: Compile MaanakSetu Compact Contract
+        working-directory: contract
         run: |
-          cd contract
-          if command -v compact >/dev/null 2>&1 && compact compile --version >/dev/null 2>&1; then
-            echo "Compiling Compact contract with active toolchain..."
-            compact compile --skip-zk src/maanaksetu.compact managed || compact compile src/maanaksetu.compact managed || true
-          else
-            echo "Compact toolchain fallback; validating committed managed compiler artifacts..."
-          fi
+          set -euxo pipefail
+          compact compile src/maanaksetu.compact managed
+
+      - name: Verify Generated Compact Artifacts
+        working-directory: contract
+        run: |
           test -f managed/contract/index.js
           test -f managed/contract/index.d.ts
           test -f managed/compiler/contract-info.json
           test -d managed/zkir
           test -d managed/keys
-          echo "All 28 managed compiler artifacts verified!"
+          echo "All 28 Compact compiler artifacts verified."
 
       - name: Run Headless Simulation Test Suite
-        run: |
-          cd contract
-          npm test
+        working-directory: contract
+        run: npm test
 
   frontend-build:
     name: Frontend Typecheck & Production Bundle
@@ -70,16 +71,13 @@ jobs:
           cache: 'npm'
 
       - name: Install Frontend Workspace Dependencies
-        run: |
-          cd frontend
-          npm ci || npm install
+        working-directory: frontend
+        run: npm ci || npm install
 
       - name: Execute TypeScript Compiler Typecheck
-        run: |
-          cd frontend
-          npx tsc --noEmit
+        working-directory: frontend
+        run: npx tsc --noEmit
 
       - name: Compile Production Web Bundle
-        run: |
-          cd frontend
-          npm run build
+        working-directory: frontend
+        run: npm run build
