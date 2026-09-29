@@ -48,10 +48,10 @@
 
 MaanakSetu smart contracts are deployed on-chain and independently verified on both Midnight testnet environments:
 
-| Network | Target Environment | Contract Address / CID (64-char Hex) | Block Height | Extrinsic Method | Explorer Link |
+| Network | Target Environment | Contract Address / CID (64-char Hex) | Deployment Tx Hash | Block Height | Explorer Verification |
 |---|---|---|---|---|---|
-| **Midnight Preview** | Developer Preview Testnet | `0e1617c890769b83393552e74ba23124e7a47b0eb73397558afdd213178d6408` | `#1,072,494` | `midnight.sendMnTransaction` | [Inspect on Preview Explorer](https://preview.midnightexplorer.com/contracts/0e1617c890769b83393552e74ba23124e7a47b0eb73397558afdd213178d6408) |
-| **Midnight Preprod** | Production-Candidate Staging | `53e020627fcfbc8b7809243af88945bf6f7faaa4f0c3767bdc6fb3f2a0f2845b` | `#2,756,460` | `midnight.sendMnTransaction` | [Inspect on Preprod Explorer](https://preprod.midnightexplorer.com/contracts/53e020627fcfbc8b7809243af88945bf6f7faaa4f0c3767bdc6fb3f2a0f2845b) |
+| **Midnight Preview** | Developer Preview Testnet | [`0e1617c890769b83393552e74ba23124e7a47b0eb73397558afdd213178d6408`](https://preview.midnightexplorer.com/contracts/0x0e1617c890769b83393552e74ba23124e7a47b0eb73397558afdd213178d6408) | [`0x9f51ae78...fd93`](https://preview.midnightexplorer.com/transactions/0x9f51ae78b1c5c35f3b695221763acfc6c1005eee8c67c13f3271a90d7e35fd93) | `#1,072,494` | [Inspect on Preview Explorer ↗](https://preview.midnightexplorer.com/contracts/0x0e1617c890769b83393552e74ba23124e7a47b0eb73397558afdd213178d6408) |
+| **Midnight Preprod** | Production-Candidate Staging | [`53e020627fcfbc8b7809243af88945bf6f7faaa4f0c3767bdc6fb3f2a0f2845b`](https://preprod.midnightexplorer.com/contracts/0x53e020627fcfbc8b7809243af88945bf6f7faaa4f0c3767bdc6fb3f2a0f2845b) | [`0x2b659137...22f3`](https://preprod.midnightexplorer.com/transactions/0x2b6591370bd7d87b23bcfcc28a14a9b8e84e8a9c7d748c405dab781722d922f3) | `#2,756,460` | [Inspect on Preprod Explorer ↗](https://preprod.midnightexplorer.com/contracts/0x53e020627fcfbc8b7809243af88945bf6f7faaa4f0c3767bdc6fb3f2a0f2845b) |
 
 ---
 

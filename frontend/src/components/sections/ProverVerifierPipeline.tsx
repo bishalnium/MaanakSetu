@@ -461,13 +461,49 @@ export const ProverVerifierPipeline: React.FC<ProverVerifierPipelineProps> = ({
                 {/* Technical Receipt Attributes */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
                   <div className="p-3 rounded-lg bg-midnight-950 border border-slate-800">
-                    <span className="text-slate-400 block mb-0.5">Transaction ID:</span>
-                    <span className="text-slate-200 break-all">{receipt.txHash}</span>
+                    <div className="flex items-center justify-between mb-0.5">
+                      <span className="text-slate-400">Transaction ID:</span>
+                      <a
+                        href={receipt.txExplorerUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[10px] text-cyan-neon hover:underline inline-flex items-center gap-0.5"
+                      >
+                        <span>View Tx</span>
+                        <ExternalLink className="h-2.5 w-2.5" />
+                      </a>
+                    </div>
+                    <a
+                      href={receipt.txExplorerUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-slate-200 hover:text-cyan-neon break-all transition-colors block"
+                    >
+                      {receipt.txHash}
+                    </a>
                   </div>
 
                   <div className="p-3 rounded-lg bg-midnight-950 border border-slate-800">
-                    <span className="text-slate-400 block mb-0.5">Contract Target:</span>
-                    <span className="text-cyan-neon break-all">{contractAddress}</span>
+                    <div className="flex items-center justify-between mb-0.5">
+                      <span className="text-slate-400">Contract Target:</span>
+                      <a
+                        href={receipt.explorerUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[10px] text-emerald-400 hover:underline inline-flex items-center gap-0.5"
+                      >
+                        <span>View Contract</span>
+                        <ExternalLink className="h-2.5 w-2.5" />
+                      </a>
+                    </div>
+                    <a
+                      href={receipt.explorerUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-cyan-neon hover:text-white break-all transition-colors block"
+                    >
+                      {contractAddress}
+                    </a>
                   </div>
 
                   <div className="p-3 rounded-lg bg-midnight-950 border border-slate-800">
