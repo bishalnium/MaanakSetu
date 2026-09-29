@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs
+dist/
+build/
+.next/
+out/
+
+# Environment & Wallet Private Keys / States
+.env
+.env.local
+.env.*.local
+.midnight-wallet-state/
+.midnight-state.json
+contract/.midnight-state.json
+midnight-level-db/
+contract/midnight-level-db/
+*.pem
+*.key
+
+# Internal Challenge Progress & Private Tracking (Kept Local)
+CHALLENGE_PROGRESS.md
+WALLETS_RECOVERY_PRIVATE.md
+VIDEO_GUIDE.md
+video_guide/
+.internal-tracking/
+
+# Logs & Temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.DS_Store
+Thumbs.db
+.vite/
+.vite-temp/

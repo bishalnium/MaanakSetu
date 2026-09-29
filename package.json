@@ -1,0 +1,33 @@
+{
+  "name": "maanaksetu",
+  "version": "0.1.0",
+  "description": "MaanakSetu — Privacy-Preserving Business Credential & Supplier Qualification Network on Midnight",
+  "private": true,
+  "workspaces": [
+    "contract",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "compile:contract": "npm run compile --prefix contract",
+    "test:contract": "npm run test --prefix contract",
+    "check-balance": "npm run check-balance --prefix contract",
+    "deploy:contract": "npm run deploy --prefix contract",
+    "network": "npm run network --prefix contract",
+    "dev:frontend": "npm run dev --prefix frontend"
+  },
+  "keywords": [
+    "midnight",
+    "compact",
+    "zero-knowledge",
+    "zk-snarks",
+    "b2b-credentials",
+    "supplier-qualification",
+    "privacy",
+    "selective-disclosure"
+  ],
+  "author": "MaanakSetu Core Team",
+  "license": "Apache-2.0"
+}
