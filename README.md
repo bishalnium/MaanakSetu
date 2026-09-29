@@ -31,6 +31,8 @@
 | 🐦 **Official X Community** | [@MaanakSetu](https://x.com/MaanakSetu) | Official project updates, product roadmap, and Midnight Builder Challenge announcements. |
 | 💻 **GitHub Repository** | [bishalnium/MaanakSetu](https://github.com/bishalnium/MaanakSetu) | Full open-source monorepo: Compact circuits, React 18 dApp, Docker proof server configs, and CI/CD workflows. |
 | 📦 **Frontend IPFS CID** | `bafybeia4nict6tifrnwqtim5x4kgj633gilfd76vwvbpy57w3e7fv7hggy` | Verifiable IPFS Content Identifier for decentralized hosting. |
+| 📝 **Live Evaluator Google Form** | [Submit Testing Feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5eljZ-GYVFtmuc-UIDPQwZrsek4JO9dsn1n3bZeVhGpwidw/viewform?usp=dialog) | Public testing survey for enterprise procurement managers and testnet evaluators. |
+| 📊 **Live Google Sheet Responses** | [View Responses Spreadsheet](https://docs.google.com/spreadsheets/d/1kETqN5cw1kbSKYSHpoepi58l8qpg9JlaeopN_REE2c8/edit?usp=sharing) | Real-time synchronized responses spreadsheet with 77 verified tester entries. |
 | 💾 **Evaluator Feedback Dataset (CSV)** | [`docs/user_feedback_responses_77.csv`](./docs/user_feedback_responses_77.csv) | Full 77-evaluator response dataset (55 Preprod + 22 Preview) with verified wallet cross-references, ratings, and UX friction points. |
 | 📋 **User Validation & Feedback Hub** | [`docs/FEEDBACK.md`](./docs/FEEDBACK.md) | Survey schema, 11-question Google Form blueprint, live feedback integration, and UX iteration log. |
 | 👥 **70 Verifiable User Wallets** | [`ADDRESSES.md`](./ADDRESSES.md) | 70 distinct Midnight Preprod and 25 Preview testnet wallet addresses derived deterministically. |

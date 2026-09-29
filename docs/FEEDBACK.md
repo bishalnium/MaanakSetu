@@ -4,9 +4,10 @@
 
 In accordance with Level 5 and Level 6 Midnight Builder Challenge validation requirements, MaanakSetu conducted user testing sessions across enterprise procurement managers, B2B vendors, MSME founders, and ecosystem builders across **both Midnight Preprod and Preview Testnets**.
 
+- 📝 **Live Evaluator Google Form:** [Fill Out Verification Survey](https://docs.google.com/forms/d/e/1FAIpQLSe5eljZ-GYVFtmuc-UIDPQwZrsek4JO9dsn1n3bZeVhGpwidw/viewform?usp=dialog)
+- 📊 **Live Responses Google Sheet:** [View Live Responses Spreadsheet](https://docs.google.com/spreadsheets/d/1kETqN5cw1kbSKYSHpoepi58l8qpg9JlaeopN_REE2c8/edit?usp=sharing)
 - 💾 **Evaluator Survey Dataset (CSV):** [`docs/user_feedback_responses_77.csv`](./user_feedback_responses_77.csv) (77 verified participant entries with timestamps, networks, & feedback)
 - 👛 **Participant Wallet Directory:** [`ADDRESSES.md`](../ADDRESSES.md) (70 Preprod + 25 Preview test accounts)
-- 📋 **Live Google Form & Sheet Integration:** *See Section 4 below for the exact Google Form question layout and Google Sheets response linking blueprint.*
 
 ### Quantitative Feedback Summary (77 Evaluators)
 - **Total Validated Responses:** 77
