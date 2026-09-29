@@ -24,9 +24,11 @@ contract/midnight-level-db/
 # Internal Challenge Progress & Private Tracking (Kept Local)
 CHALLENGE_PROGRESS.md
 WALLETS_RECOVERY_PRIVATE.md
+ADDRESSES.md
 VIDEO_GUIDE.md
 video_guide/
 .internal-tracking/
+*poster*
 
 # Logs & Temporary files
 npm-debug.log*

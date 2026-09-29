@@ -27,17 +27,15 @@
 | Deliverable Asset | Location / Resource | Description & Verification |
 |---|---|---|
 | 🌐 **Live Web Application** | [maanaksetu.vercel.app](https://maanaksetu.vercel.app) *(or local `http://localhost:3000`)* | Full interactive dApp with 3-step ZK proving pipeline, Business Passport, and Buyer Policy Builder. |
-| 🎥 **Video Demo Walkthrough** | [MaanakSetu Video Demo](https://youtu.be/MaanakSetuDemo) | Complete click-by-click visual demonstration of wallet connection, multi-network switching, and ZK proving pipeline. |
-| 🐦 **Official X Community** | [@MaanakSetu](https://x.com/MaanakSetu) | Official project updates, product roadmap, and Midnight Builder Challenge announcements. |
+| 🎥 **Video Demo Walkthrough** | [Watch on YouTube](https://youtu.be/PkR8-aWux8M) | Complete click-by-click walkthrough covering multi-network switching, client-side witness formulation, ZK proof synthesis, and on-chain verification. |
+| 🐦 **Official X Community** | [@MaanakSetu](https://x.com/MaanakSetu) | Official project updates, product roadmap, and announcements. |
 | 💻 **GitHub Repository** | [bishalnium/MaanakSetu](https://github.com/bishalnium/MaanakSetu) | Full open-source monorepo: Compact circuits, React 18 dApp, Docker proof server configs, and CI/CD workflows. |
 | 📦 **Frontend IPFS CID** | `bafybeia4nict6tifrnwqtim5x4kgj633gilfd76vwvbpy57w3e7fv7hggy` | Verifiable IPFS Content Identifier for decentralized hosting. |
-| 📝 **Live Evaluator Google Form** | [Submit Testing Feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5eljZ-GYVFtmuc-UIDPQwZrsek4JO9dsn1n3bZeVhGpwidw/viewform?usp=dialog) | Public testing survey for enterprise procurement managers and testnet evaluators. |
-| 📊 **Live Google Sheet Responses** | [View Responses Spreadsheet](https://docs.google.com/spreadsheets/d/1kETqN5cw1kbSKYSHpoepi58l8qpg9JlaeopN_REE2c8/edit?usp=sharing) | Real-time synchronized responses spreadsheet with 77 verified tester entries. |
-| 💾 **Evaluator Feedback Dataset (CSV)** | [`docs/user_feedback_responses_77.csv`](./docs/user_feedback_responses_77.csv) | Full 77-evaluator response dataset (55 Preprod + 22 Preview) with verified wallet cross-references, ratings, and UX friction points. |
-| 📋 **User Validation & Feedback Hub** | [`docs/FEEDBACK.md`](./docs/FEEDBACK.md) | Survey schema, 11-question Google Form blueprint, live feedback integration, and UX iteration log. |
-| 👥 **70 Verifiable User Wallets** | [`ADDRESSES.md`](./ADDRESSES.md) | 70 distinct Midnight Preprod and 25 Preview testnet wallet addresses derived deterministically. |
-| 📜 **Preview Transaction Ledger** | [`docs/TRANSACTIONS_PREVIEW.md`](./docs/TRANSACTIONS_PREVIEW.md) | **25 confirmed on-chain transactions** executed across Midnight **Preview** testnet. |
-| 📜 **Preprod Transaction Ledger** | [`docs/TRANSACTIONS_PREPROD.md`](./docs/TRANSACTIONS_PREPROD.md) | **55 confirmed on-chain transactions** executed across Midnight **Preprod** testnet. |
+| 📝 **Live Evaluator Feedback Form** | [Submit Testing Feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5eljZ-GYVFtmuc-UIDPQwZrsek4JO9dsn1n3bZeVhGpwidw/viewform?usp=dialog) | Public feedback survey for procurement managers and testnet evaluators. |
+| 📊 **Live Community Responses** | [View Responses Spreadsheet](https://docs.google.com/spreadsheets/d/1kETqN5cw1kbSKYSHpoepi58l8qpg9JlaeopN_REE2c8/edit?usp=sharing) | Real-time synchronized responses spreadsheet collecting tester feedback. |
+| 📋 **Testing Documentation & Hub** | [`docs/FEEDBACK.md`](./docs/FEEDBACK.md) | Survey schema, testing methodology, and feedback review log. |
+| 📜 **Preview Transaction Ledger** | [`docs/TRANSACTIONS_PREVIEW.md`](./docs/TRANSACTIONS_PREVIEW.md) | Confirmed on-chain transactions executed across Midnight **Preview** testnet. |
+| 📜 **Preprod Transaction Ledger** | [`docs/TRANSACTIONS_PREPROD.md`](./docs/TRANSACTIONS_PREPROD.md) | Confirmed on-chain transactions executed across Midnight **Preprod** testnet. |
 | 🔒 **Dual-Network Verified Contracts** | [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | On-chain contracts deployed and verified on both Preview and Preprod testnets. |
 | 🧪 **Simulation Test Suite** | [`contract/test/maanaksetu.test.ts`](./contract/test/maanaksetu.test.ts) | 14 automated headless Compact simulation unit tests covering all 4 circuits and privacy invariants. |
 | 🔍 **Independent Verification Script** | [`contract/scripts/verify-deployment.ts`](./contract/scripts/verify-deployment.ts) | Direct Substrate RPC (`wss://rpc.*`) & Indexer GraphQL (`https://indexer.*`) verification tool. |
@@ -95,6 +93,25 @@ In your Midnight Lace Wallet or 1AM Wallet browser extension:
 │      └─► Underlying financial documents remain 100% confidential.     │
 └────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 📸 Platform Interface & Application Tour
+
+| 1. Home Portal & 3D Interactive Business Passport | 2. Client-Side ZK Prover Pipeline |
+|:---:|:---:|
+| ![Home Portal & 3D Interactive Business Passport](./images/01_hero_portal.png) | ![Client-Side ZK Prover Pipeline](./images/02_zk_prover_pipeline.png) |
+| *Single-line glider navigation, live telemetry counters, and 3D tilt tracking card.* | *4 gate selector tabs, witness inputs, and client-side proof synthesis.* |
+
+| 3. Reusable Maanak Business Passport | 4. Protocol Architecture & Trust Model |
+|:---:|:---:|
+| ![Reusable Maanak Business Passport](./images/03_business_passport.png) | ![Protocol Architecture & Trust Model](./images/04_protocol_architecture.png) |
+| *Decentralized verifiable credentials with cryptographic commitment verification.* | *4-phase trust architecture: issuance, witness, synthesis, settlement.* |
+
+| 5. Enterprise Buyer Policy Builder |
+|:---:|
+| ![Enterprise Buyer Policy Builder](./images/05_buyer_policy_builder.png) |
+| *Real-time policy configuration sliders and compiled Compact JSON schema.* |
 
 ---
 
