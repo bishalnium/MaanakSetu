@@ -158,9 +158,14 @@ export const ProverVerifierPipeline: React.FC<ProverVerifierPipelineProps> = ({
               </div>
 
               <div>
-                <label className="block font-medium text-slate-300 mb-1.5">
-                  Business Registration / GSTIN
-                </label>
+                <div className="flex items-center justify-between mb-1.5">
+                  <label className="font-medium text-slate-300">
+                    Business Registration / GSTIN
+                  </label>
+                  <span className="text-[10px] text-cyan-neon font-semibold flex items-center gap-1">
+                    <ShieldCheck className="h-3 w-3" /> Reusable B2B Identity
+                  </span>
+                </div>
                 <input
                   type="text"
                   placeholder="e.g. GSTIN27AABCT4321Q1Z8"
@@ -168,6 +173,9 @@ export const ProverVerifierPipeline: React.FC<ProverVerifierPipelineProps> = ({
                   onChange={(e) => updateInput('registrationNumber', e.target.value)}
                   className="w-full rounded-xl bg-midnight-950 border border-slate-800 px-3.5 py-2.5 text-slate-100 placeholder-slate-600 focus:border-cyan-neon focus:outline-none focus:ring-1 focus:ring-cyan-neon transition-all"
                 />
+                <p className="text-[10px] text-slate-500 mt-1">
+                  Cryptographically bound to your private wallet salt. One identity can prove qualifications across unlimited buyer tenders without forgery.
+                </p>
               </div>
 
               {/* Predicate 1: Turnover Fields */}

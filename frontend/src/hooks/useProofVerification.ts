@@ -186,7 +186,7 @@ export function useProofVerification(network: NetworkId, contractAddress: string
         blockHeight,
         gasSpentDust: '0.042 tDUST',
         selectiveDisclosureNote:
-          'Underlying documents, exact financial revenues, and private keys were never disclosed on-chain.',
+          'Underlying documents, exact financial revenues, and private keys were never disclosed on-chain. Identity is cryptographically bound to the supplier keypair to prevent impersonation.',
         explorerUrl: getExplorerContractUrl(network, contractAddress),
         txExplorerUrl: getExplorerTxUrl(network, txHash),
       };
